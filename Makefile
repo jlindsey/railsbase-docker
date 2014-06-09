@@ -1,5 +1,8 @@
 default:
-	docker build -t jlindsey/rails_base .
+	docker build -t jlindsey/railsbase-docker .
 
-.PHONY: default
+clean:
+	docker rmi -f jlindsey/railsbase-docker
+
+.PHONY: default clean
 

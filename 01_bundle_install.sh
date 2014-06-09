@@ -1,3 +1,5 @@
 #!/bin/sh
-cd /app && bundle install --without development test
+if [ $SHOULD_BUNDLE_INSTALL -eq 1]; then
+  cd /app && bundle install --without development test
+fi
 
